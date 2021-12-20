@@ -1,0 +1,10 @@
+# ninja log v5
+3	308	6616807471382683	CMakeFiles/checkers.dir/main.cpp.obj	5cc2f57716fb236a
+16	976	6616807478073491	CMakeFiles/checkers.dir/board.cpp.obj	cf2607c86b150371
+976	1184	6616807480114269	checkers.exe	9e027bd7814386f4
+3	430	6616809753843187	CMakeFiles/checkers.dir/main.cpp.obj	5cc2f57716fb236a
+7	1391	6616809763404818	CMakeFiles/checkers.dir/board.cpp.obj	cf2607c86b150371
+1391	1528	6616809764789843	checkers.exe	9e027bd7814386f4
+3	366	6617463318411435	CMakeFiles/checkers.dir/main.cpp.obj	5cc2f57716fb236a
+9	1108	6617463325945556	CMakeFiles/checkers.dir/board.cpp.obj	cf2607c86b150371
+1108	1526	6617463330045293	checkers.exe	9e027bd7814386f4
