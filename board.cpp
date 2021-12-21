@@ -3,9 +3,10 @@
 //
 #include <iostream>
 #include "board.h"
-
+#include <cstring>
 #define RECURSIVE_DEPTH 11
-
+#define INT_MIN -2147483648
+#define INT_MAX 2147483647
 
 Board::Board() {
     pieces = new piece *[8];
@@ -26,11 +27,6 @@ Board::Board() {
             pieces[6][i] = {x, false};
         }
     }
-}
-
-Board::~Board() {
-    delete[] pieces;
-    history.
 }
 
 Board::Board(piece **p) {
@@ -220,8 +216,15 @@ void Board::undo() {
     if (history.empty()) {
         return;
     }
+    if (prev_undo != nullptr) {
+        delete prev_undo;
+    }
+    for (int i=0; i<8; i++) {
+        delete[] pieces[i];
+    }
     delete[] pieces;
     pieces = history.back()->pieces;
+    prev_undo = history.back();
     history.pop_back();
 }
 
@@ -235,12 +238,20 @@ void Game::play() {
         std::cout << (team == x ? "x" : "o") << "'s turn" << std::endl;
         if (team == x) {
             auto poss_moves = b.possible_moves(team);
+            if (poss_moves.empty()) {
+                std::cout << "You suck! The computer wins!" << std::endl;
+                return;
+            }
             Board::display_moves(poss_moves);
             int choice;
             std::cin >> choice;
             b.make_move(poss_moves[choice - 1]);
         } else {
-            b.make_move(calc_move());
+            move m = calc_move();
+            if (m.from.x == -1) {
+                std::cout << "You win! Congrats!" << std::endl;
+            }
+            b.make_move(m);
         }
 
 
@@ -251,18 +262,21 @@ void Game::play() {
 }
 
 move Game::calc_move() {
+    board_states_analyzed = 0;
     std::vector<move> moves = b.possible_moves(o);
     if (moves.empty()) {
         return move{location{-1, -1}, std::vector<location>{location{-1, -1}}};
     } else if (moves.size() == 1) {
         return moves[0];
     } else {
-        return moves[calc_move(INT_MIN, INT_MAX, RECURSIVE_DEPTH, false, true)];
+        int m = calc_move(INT_MIN, INT_MAX, RECURSIVE_DEPTH, false, true);
+        std::cout << std::endl << "board states analyzed: " << board_states_analyzed << std::endl;
+        return moves[m];
     }
 }
 
 int Game::calc_move(int alpha, int beta, int depth, bool maximize, bool root) {
-
+    board_states_analyzed++;
     if (depth == 0) {
         return b.score_board();
     }
