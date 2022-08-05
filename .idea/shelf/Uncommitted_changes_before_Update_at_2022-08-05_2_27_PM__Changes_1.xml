@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_2022-08-05_2_27_PM_[Changes]1" date="1659731283180" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-08-05_2_27_PM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-08-05 2:27 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/checkers.dir/main.cpp.obj" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/checkers.dir/main.cpp.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-08-05_2_27_PM_[Changes]1/main.cpp.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/checkers.exe" />
+    <option name="AFTER_PATH" value="cmake-build-debug/checkers.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-08-05_2_27_PM_[Changes]1/checkers.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/checkers.dir/board.cpp.obj" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/checkers.dir/board.cpp.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-08-05_2_27_PM_[Changes]1/board.cpp.obj" />
+  </binary>
+</changelist>
