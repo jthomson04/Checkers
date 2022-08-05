@@ -1,3 +1,0 @@
-C:/Users/johnw/OneDrive/Desktop/c++/checkers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/johnw/OneDrive/Desktop/c++/checkers/cmake-build-debug/CMakeFiles/checkers.dir
-C:/Users/johnw/OneDrive/Desktop/c++/checkers/cmake-build-debug/CMakeFiles/edit_cache.dir
